@@ -1,5 +1,4 @@
 #include <iostream>
-using namespace std;
 
 //! access specifier
 /*  define how the members (attributes and methods) of a class can be accessed. 
@@ -21,7 +20,7 @@ class Employee {
         int salary;
 
     public:
-        string name;
+        std::string name;
         void set_salary(int s) {
             salary = s;
         }
@@ -31,7 +30,7 @@ class Employee {
         }
 
     protected:
-        string protected_string;
+        std::string protected_string;
         int protected_int;
 
 };
@@ -40,12 +39,12 @@ int main(){
     Employee test_object;
     //* will work without error
     test_object.name = "something";
-    test_object.set_salary(5341);               // using public method to get private info
-    cout << test_object.get_salary() << endl;
+    test_object.set_salary(5341);   // using public method to get private info
+    std::cout << test_object.get_salary() << std::endl;
 
     //* will give error
     // test_object.salary = 3424;
-    // cout << test_object.salary << endl;
+    // std::cout << test_object.salary << std::endl;
     // test_object.protected_string = "trial text";
     // test_object.protected_int = 756;
 
