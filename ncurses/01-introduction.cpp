@@ -27,3 +27,9 @@ int main(int argc, char ** argv) {
     // deallocate the memory and end ncurses
     endwin();
 }
+
+## Compile
+```bash
+g++ -lncurses file.cpp -o executable
+```
+
