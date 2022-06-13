@@ -33,3 +33,16 @@ int main(int argc, char ** argv) {
 g++ -lncurses file.cpp -o executable
 ```
 
+## Cursor
+It starts from (0,0) by default.
+
+```cpp
+move(y, x); // moves the cursor to the specified location
+```
+ncurses uses (y, x) syntax rather than (x, y).
+Y is number of lines and X is number of characters.
+
+Printing data at specified location:
+```cpp
+mvprintw(y, x, "content");
+```
