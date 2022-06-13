@@ -27,11 +27,8 @@ int main(int argc, char ** argv) {
     // deallocate the memory and end ncurses
     endwin();
 }
-
-## Compile
-```bash
-g++ -lncurses file.cpp -o executable
 ```
+
 
 ## Cursor
 It starts from (0,0) by default.
@@ -45,4 +42,17 @@ Y is number of lines and X is number of characters.
 Printing data at specified location:
 ```cpp
 mvprintw(y, x, "content");
+```
+
+
+## Clear screen
+to clear the whole screen at any point, use
+```cpp
+clear();
+```
+
+
+## Compile
+```bash
+g++ -lncurses file.cpp -o executable
 ```
